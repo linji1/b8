@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 进入「设置」点「移动网络」点「接入点名称」点「新建Apn」 第一项名称写 cmtds 第二项apn里面写 CMTDS 注意大写 如果有朋友设置后不能上的，请先还原一下网络设置，再重新启动后试试</div>
-</div><p class="time clb">闲说 2013-11-07 12:19:39 通过 网页 <i class="iconfont icon-view"></i> 浏览(3900) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2013-11-07 12:19:39 通过 网页 <i class="iconfont icon-view"></i> 浏览(3901) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

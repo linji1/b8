@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 刚刚有位冯先生购买了本站的”广告服务包 1″，在此表示对其感谢，祝他生意大发。虽然钱很少，但还是比较开心，表示还是有人在关注本博客，希望有更多的朋友关注并购买本站广告位服务，希望本站能继续生存下去。广告位出售网址：<a href="/3249.html" target="_blank">https://linji.cn/3249.html</a></div>
-</div><p class="time clb">闲说 2011-03-11 22:29:13 通过 网页 <i class="iconfont icon-view"></i> 浏览(3421) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-03-11 22:29:13 通过 网页 <i class="iconfont icon-view"></i> 浏览(3423) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

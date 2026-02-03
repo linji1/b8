@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -635,7 +638,7 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 暑假过一半多了，虽然也有很多杂事烦恼，夜里独处时，尤其是在村里，夜里静得可怕，独自对着屏幕，有点茫然，只能强迫自己找点事让自己忙起来。<br>如果退休了，会是怎样？想早点退休，却又怕退休，真是矛盾。
 <br>接下来，再修改一下网站，让其更加完美。</div>
-</div><p class="time clb">闲说 2024-08-08 12:48:31 通过 网页 <i class="iconfont icon-view"></i> 浏览(1605) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2024-08-08 12:48:31 通过 网页 <i class="iconfont icon-view"></i> 浏览(1606) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

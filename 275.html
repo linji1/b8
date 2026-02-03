@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -635,7 +638,7 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 今天早上，只有一小部份的学生回校，校长开会主要是宣布放假时间（7月10日）﻿﻿﻿、回校时间（8月28日），将奖状发下去，各班主任将学生手册发放下去，会散了，学生回家，老师集体到杨家集餐。吃完饭，天却下起来。集餐人员：林炳校长、林仁贵、林继、黄丽、郑梅琴、肖兰琴、蔡海珍、陈娇凤、林如锦，吃了270元。
 <center><a href="/assets3/file/2020/02/b_220035_865970905.webp" data-fancybox="gallery" data-caption=""><img src="/assets3/file/2020/02/b_220035_865970905.webp" style="max-width:100%;"></a></center></div>
-</div><p class="time clb">闲说 2011-07-10 09:25:31 通过 网页 <i class="iconfont icon-view"></i> 浏览(3717) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-07-10 09:25:31 通过 网页 <i class="iconfont icon-view"></i> 浏览(3718) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

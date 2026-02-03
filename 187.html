@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -635,7 +638,7 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 今天叫21位同学回校辅导,将整本课本梳理了一下,希望对镇统考有帮助。在这里谢谢红兰同学,感谢她编写的复习题。
 <a href="/assets3/file/2020/02/b_023414_2059669151.webp" data-fancybox="gallery" data-caption=""><img src="/assets3/file/2020/02/b_023414_2059669151.webp" style="max-width:100%;"></a></div>
-</div><p class="time clb">闲说 2011-01-08 16:40:30 通过 网页 <i class="iconfont icon-view"></i> 浏览(3288) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-01-08 16:40:30 通过 网页 <i class="iconfont icon-view"></i> 浏览(3290) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

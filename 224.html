@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 我想了一下，还是不去了，我知道这样做，肯定会得罪校长，教导主任这差事可能会泡汤了。但是，如果我去帮忙了，引起仁贵老师的不满，那我的小高怎么办呢？他不帮我写资料，我写的字那么丑。上次没有通过，我可不想这次又没通过，那可是钱呢？上次不见了几千块。算了，就这样决定吧！我还能怎么办呢？</div>
-</div><p class="time clb">闲说 2011-04-16 00:10:20 通过 网页 <i class="iconfont icon-view"></i> 浏览(3335) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-04-16 00:10:20 通过 网页 <i class="iconfont icon-view"></i> 浏览(3336) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

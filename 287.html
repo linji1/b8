@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -635,7 +638,7 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 昨天下午第三节课，我与林炳校长、林仁贵、蔡海珍老师将星期一下午第三节课临场作文赛的作品张贴到墙上，为的是迎接今天教办下来飞行抽测。今天早上第二节课，谭校长下来抽测三年级语文与四年级数学，这些都是郑老师的课，希望考出好成绩，不要让学校被批评。我还要写教学常规月汇报材料，真烦！
 <center><a href="/assets3/file/2020/02/b_002313_284539928.webp" data-fancybox="gallery" data-caption=""><img src="/assets3/file/2020/02/b_002313_284539928.webp" style="max-width:100%;"></a></center></div>
-</div><p class="time clb">闲说 2011-11-10 19:53:47 通过 网页 <i class="iconfont icon-view"></i> 浏览(3529) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-11-10 19:53:47 通过 网页 <i class="iconfont icon-view"></i> 浏览(3532) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -635,7 +638,7 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 今天早上七点钟，全校总动员，六年级向校内洒水，以免灰尘满天飞；各年级将凳子搬出来排好；做大课间操，迎接共青团中央青少年活动基地的同志。八点钟，他们乘坐一辆面包车来校，学生家长陆续到来，校长致词，马老师开讲，家庭教育如何开展，应注意哪些细节。接着推荐一本《奇记》英语学习资料，形象化学习，当场做了示范。天公不做美，下起毛毛细雨，草草结束。开始卖书，150元一本，两个DVD光盘，一张学习卡。送给学校一本，黄丽、林仁贵、陈娇凤老师各买了一本。
 <center><a href="/assets3/file/2020/02/b_122423_875778954.webp" data-fancybox="gallery" data-caption=""><img src="/assets3/file/2020/02/b_122423_875778954.webp" style="max-width:100%;"></a></center></div>
-</div><p class="time clb">闲说 2012-10-19 22:03:33 通过 网页 <i class="iconfont icon-view"></i> 浏览(3778) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2012-10-19 22:03:33 通过 网页 <i class="iconfont icon-view"></i> 浏览(3779) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

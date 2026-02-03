@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 今天初一，只能呆在家里。自从当了代理，到现在成交的只有两位网友。我对于别人的请求还是不懂得拒绝，老是答应别人，当浪费了时间却搞不定时，心理也不舒服，总觉得亏欠别人，弄得心情很不好，又容易得罪。代理LUM只是想在网上练手，从中是不会赚到什么钱的。LUM代理，所销售的是LUM面板三年授权，每年都有三次换机器码的机会，不是LUM的问题如果要帮忙的话，是要收服务费的。这几天从交流中得到的体会就是这样吧！</div>
-</div><p class="time clb">闲说 2012-01-23 21:58:36 通过 网页 <i class="iconfont icon-view"></i> 浏览(3640) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2012-01-23 21:58:36 通过 网页 <i class="iconfont icon-view"></i> 浏览(3642) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

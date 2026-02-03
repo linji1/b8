@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -635,7 +638,7 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 全班分成六个小组，每天小组长出2~5道数学题，优秀的就张贴到光荣榜。
 <center><a href="/assets3/file/2020/03/Image_000592.jpg" data-fancybox="gallery"><img src="/assets3/file/2020/03/Image_000592.jpg" width="320" height="380"></a>&nbsp; &nbsp;<a href="/assets3/file/2020/03/Image_000602.jpg" data-fancybox="gallery"><img src="/assets3/file/2020/03/Image_000602.jpg" width="320" height="380"></a></center></div>
-</div><p class="time clb">闲说 2010-12-01 22:58:49 通过 网页 <i class="iconfont icon-view"></i> 浏览(4384) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2010-12-01 22:58:49 通过 网页 <i class="iconfont icon-view"></i> 浏览(4385) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

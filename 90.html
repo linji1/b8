@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <h1>要放假了</h1><div class="text">
 2010年1月19日一年级至五年级考试.<br>1月20日六年级调研考试，上午我与校长到民众小学监考．<br>1月21日全校老师回校批改试卷,四年级数学有14人及格,5人9O分以上,林雅丽最高97分.<br>1月22日到镇中心小批改试卷.<br>1月24日放假,2月27日回校.<br>1月24日—27日到电大上课(职务培训).<br>1月28日前交小学心理健康教育论文.<br>下学期准备申请入党,申请评高级职称.祝自已顺利过关.<br>虽然今天校长讲下学期让我当教导,但是,我高兴之后冷静下来一想,这是不可能的.我真是天真,下学期如果能入党和顺利评上高职就高兴了,哎!不要多想了.</div>
-</div><p class="time clb">闲说 2010-01-21 23:26:04 通过 网页 <i class="iconfont icon-view"></i> 浏览(4237) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2010-01-21 23:26:04 通过 网页 <i class="iconfont icon-view"></i> 浏览(4238) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

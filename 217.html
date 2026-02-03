@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 昨天，让小乔、月玲、红兰、红平、菊曼、如花六位同学将小学主要知识点写到纸上并帖到墙上让其它同学复习参考；今天，宏瑞、特立、琪富、红兰来校帮忙将被破坏的窗户玻璃安装好，学生捐68元，我补了15元，希望坏家伙不要来搞破坏了，这段时间时不时地下雨，天气变冷，没有玻璃是很难过的。</div>
-</div><p class="time clb">闲说 2011-03-27 23:46:03 通过 网页 <i class="iconfont icon-view"></i> 浏览(3941) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-03-27 23:46:03 通过 网页 <i class="iconfont icon-view"></i> 浏览(3942) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

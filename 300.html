@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -635,7 +638,7 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 期中考试批改结束，这次考试基本上能达到学校的要求。从各科试卷来看，各年级存在的问题是：两极分化，成绩好的学生能考到90多分，而最差的却只能考到几分。接着跟踪辅导好基础差的学生，作业也要分层次布置，让各类学生都能体验成就感，产生兴趣，学习起来就有动力，成绩也就会慢慢的提升上来。
 <center><a href="/assets3/file/2020/02/b_005102_112885874.webp" data-fancybox="gallery" data-caption=""><img src="/assets3/file/2020/02/b_005102_112885874.webp" style="max-width:100%;"></a></center></div>
-</div><p class="time clb">闲说 2011-11-22 21:56:34 通过 网页 <i class="iconfont icon-view"></i> 浏览(3294) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-11-22 21:56:34 通过 网页 <i class="iconfont icon-view"></i> 浏览(3297) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

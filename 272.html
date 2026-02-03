@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 值得反思的7句话：1.如果你不喜欢现在的工作，要么辞职不干，要么就闭嘴不言。2.每个人都有孤独的时候，要学会忍受孤独，这样才会成熟。3.不要像玻璃那样脆弱。4.管住自己的嘴巴。5.机会从不会“失掉”你失掉了，自有别人会得到。6.若电话老是不响，你该打出去。7.千万别因为到了结婚年龄而草率结婚。</div>
-</div><p class="time clb">闲说 2011-07-04 19:13:01 通过 网页 <i class="iconfont icon-view"></i> 浏览(3276) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-07-04 19:13:01 通过 网页 <i class="iconfont icon-view"></i> 浏览(3277) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

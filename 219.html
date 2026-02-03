@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 六年级学生越来越目中无人，纪律非常差，管理学生，学生家长只会责备我，却无视学生的坏行为，我真的好累，不想太卖命了，管它的，我只管将课程教完就行了，不管他们考得怎么样，不能拿他们的错误来惩罚我自己，免得给气死了，何必花那么多精力去培育一些垃圾呢。那几个家伙真是败类，不能再生气了。</div>
-</div><p class="time clb">闲说 2011-03-30 20:58:02 通过 网页 <i class="iconfont icon-view"></i> 浏览(3456) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-03-30 20:58:02 通过 网页 <i class="iconfont icon-view"></i> 浏览(3457) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

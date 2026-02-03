@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 明天请假到二姐家帮忙办理姐夫父亲的丧事。人始终逃不了自然规律，总是摆脱不了生老病死。那在这世上还要争个什么呢？不如洒脱一点，出世一点，不要事事计较，不要事事在意，人能活多久呢？还是活得精彩一点、高兴一点、快快乐乐，那管别人怎么看，我自人生潇洒走一回。</div>
-</div><p class="time clb">闲说 2010-12-05 22:16:01 通过 网页 <i class="iconfont icon-view"></i> 浏览(3165) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2010-12-05 22:16:01 通过 网页 <i class="iconfont icon-view"></i> 浏览(3166) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

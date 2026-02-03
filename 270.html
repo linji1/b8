@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -635,7 +638,7 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 已经填写入党志愿书,明天跟随校长去开党会,可能要读申请书,如果没有问题,我将成为预备党员,一年后就有机会转正。
 <center><a href="/assets3/file/2020/02/b_214904_1823978237.webp" data-fancybox="gallery" data-caption=""><img src="/assets3/file/2020/02/b_214904_1823978237.webp" style="max-width:100%;"></a></center></div>
-</div><p class="time clb">闲说 2011-06-29 20:27:58 通过 网页 <i class="iconfont icon-view"></i> 浏览(3164) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-06-29 20:27:58 通过 网页 <i class="iconfont icon-view"></i> 浏览(3166) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

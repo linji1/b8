@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 六年级三好学生：1. 林小乔、2. 林月玲、3. 林红兰、4. 林玉娇、5. 颜菊曼、6. 林丽珠、7. 林丽萍、8. 林如花、9. 林红平、10. 林静红、11. 林小翔、12. 林梦媚、13. 林琪富、14. 林炳和（没来）今天来的同学:15.林相仁、16.林如孟、17.林有朋</div>
-</div><p class="time clb">闲说 2011-01-16 14:44:34 通过 网页 <i class="iconfont icon-view"></i> 浏览(3457) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-01-16 14:44:34 通过 网页 <i class="iconfont icon-view"></i> 浏览(3458) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 我很烦，有的时候觉得自己真的很可悲，将全部时间、精力投入教书，家庭顾不上，赚不到钱，领导不信，老婆又唠叨，有时候真的想脱离这一切，到寺庙里过下半辈子，有时真的觉得自己很没用，教这破书，无法让学生听话，在网上建网站，却又赚不到钱，人啊，真难。</div>
-</div><p class="time clb">闲说 2011-04-30 08:23:35 通过 网页 <i class="iconfont icon-view"></i> 浏览(3522) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-04-30 08:23:35 通过 网页 <i class="iconfont icon-view"></i> 浏览(3523) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

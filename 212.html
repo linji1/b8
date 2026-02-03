@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -635,7 +638,7 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 今天早读,有两位同学(中山、红兰)打架、互撕书本,放学后留了解情况再处理,要沉住气,冲动是魔鬼;正在六年级测试第一单元(昨天下午试卷刚回,沒有科学卷答案!
 <center><a href="/assets3/file/2020/02/b_172518_353712269.webp" data-fancybox="gallery" data-caption=""><img src="/assets3/file/2020/02/b_172518_353712269.webp" style="max-width:100%;"></a></center></div>
-</div><p class="time clb">闲说 2011-03-10 08:40:14 通过 网页 <i class="iconfont icon-view"></i> 浏览(3305) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2011-03-10 08:40:14 通过 网页 <i class="iconfont icon-view"></i> 浏览(3306) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a></p></div>  
 <!-- 上一篇 下一篇开始 -->
