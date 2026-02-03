@@ -581,10 +581,42 @@ document.body.addEventListener('input', POWERMODE);
 </style>
 <script src="/assets/js/translate.js"></script>
   <div id="content" style="position: relative;">
+    <!-- <head>中添加听读功能样式 -->
+<style>
+  /* 句子高亮样式 */
+.sentence.current {
+  background-color: #fffacd; /* 淡黄色高亮 */
+  border-radius: 3px;
+}
+.sentence {
+  cursor: pointer;
+}
+</style>
+<!-- 听读控制面板（插入到printview容器前） -->
+<div class="reader-panel" style="margin: 20px 0;display: none;">
+  <div class="controls">
+    <button id="playBtn" class="btn" onclick="handlePlayAction('play')">开始</button>
+    <button id="pauseBtn" class="btn" disabled onclick="handlePlayAction('pause')">暂停</button>
+    <button id="resumeBtn" class="btn" disabled onclick="handlePlayAction('resume')">继续</button>
+    <button id="stopBtn" class="btn" disabled onclick="handlePlayAction('stop')">停止</button>
+  </div>
+  <div class="voice-control">
+    <label for="voiceSelect">选择语音</label>
+    <select id="voiceSelect" class="voice-select" aria-label="选择朗读语音"></select>
+  </div>
+  <div class="progress-container">
+    <div class="progress-info">
+      进度: <span id="progressText">0/0</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+</div>
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b8/list-8.html" style="color: #7d8c8e;">闲说</a><span>/</span>正文</div>
-<span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
+<button id="playBtn" class="btn" onclick="handlePlayAction('play')" style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;color: black;background: #f0f0f5;" title="收听本文"><i class="fa fa-headphones" aria-hidden="true"></i> 收听本文</button><span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
 
 <style type="text/css">
 	span#translate select {
@@ -602,7 +634,16 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <h1>中国广电卡介绍</h1><div class="text">
 <center><span style="font-size: 25px;">广电客服10099<br></span></center>
-
+<br>
+【确认提醒】尊敬的客户，您好！您正在中国广电线上渠道 办理副卡开户，<br>
+1、副卡套餐内容：可共享主卡语音、流量、套外单价，副卡赠送来电显示，主副卡之间国内语音(不含港澳台)通话免费；<br>
+2、资费信息：10元/月（具体折扣以主套餐促销折扣为准）；<br>
+3、生效时间：新办理的副卡需激活才可使用，且生效时间以激活日期为准。<br>
+4、副卡可共享主卡套餐网络速率服务，不共享主卡得到赠送的语音、流量及短彩信。<br>
+5、副卡仅可办理指定业务，其它业务需由主卡办理，副卡如需办理停开机、销号业务，需副卡身份证本人办理。验证码有效期5分钟。若非本人操作，请勿泄露验证码信息，任何索取验证码行为及溢价销售行为均可能涉嫌诈骗。【中国广电】<br>
+<hr>
+【副卡成员变更】尊敬的客户，您好！19207590049于2026年02月01日 18时02分生效成为您的副卡，生效后将共享您号码为19207594713套餐内通话分钟数以及流量。【中国广电】<br>
+<hr>
 <strong>一、祥龙卡</strong>：原月租29元首充后有赠费,优惠后19元/月，入网首月赠送体验金实现首月免月租（体验金按月租按天折算），含通用流量192G/月。<br><br>
 
 <strong>具体详情：</strong>祥龙卡原月租29元/月包含套内通用流量30GB。首充100得150元话费，100元立即到账，次月起连续5个月每月返还10元。即首月0月租，2- 6月19元月租。激活成功后需参加首充活动，充值100元每月赠送通用流量162GB，连续赠送24个月，赠送流量可结转且可与副卡共享。<br><br>
@@ -644,9 +685,9 @@ document.body.addEventListener('input', POWERMODE);
 例如套餐月租29元，29元/30天或者31天，每天不到一元的月租，月租按天折算哦  参加有返费的另外返，亲<br><br>
 
 广电祥龙卡激活首月按剩余天数返还月租体验金。祥龙卡首月免费的，广电显示月租折合成按天计算。您首充100 ，显示多的就是体验金、返费次月开始 。祥龙卡激活首月免费，充值赠送的162G是全给的，套餐内的30通用流量，按激活当月剩余天数算。次月开始流量显示全月。广电APP流量剩余这里查询流量，亲</div>
-<p class="time clb">闲说 2024-08-24 16:35:28 通过 网页 <i class="iconfont icon-view"></i> 浏览(4073) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">闲说 2024-08-24 16:35:28 通过 网页 <i class="iconfont icon-view"></i> 浏览(4113) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
-	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
+	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->
 <div style="overflow: hidden;margin-bottom: 10px;">
 
@@ -1007,5 +1048,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- 为代码块加上双击复制功能 -->
+<!-- </body>前插入听读核心JS -->
+<script src="/assets/js/playBtn.js"></script>
 </body>
 </html>
